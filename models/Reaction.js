@@ -1,12 +1,9 @@
-const {Schema}=require('mongoose');
+const {Schema, Types, ObjectId}=require('mongoose');
 
 //schema only
 const reactionSchema=new Schema(
     {
-        reactionId: {
-            type:  Schema.Types.ObjectId,
-            default: new ObjectId
-        },
+        
         reactionBody: {
             type: String,
             required: true,
@@ -35,4 +32,4 @@ const reactionSchema=new Schema(
 
 );
 
-module.exports=Reaction;
+module.exports=reactionSchema;
